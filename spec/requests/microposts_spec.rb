@@ -16,7 +16,7 @@ describe "Microposts" do
       
       it "should not make a new micropost" do
         lambda do
-          visit signin_path
+          visit root_path
           fill_in :micropost_content, :with => ""
           click_button
           response.should render_template('pages/home')
